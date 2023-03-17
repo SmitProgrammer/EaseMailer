@@ -1,6 +1,6 @@
 <h2>Ease Mailer</h2>
 <hr>
-<p>Easy Mailer is a simple PHP class that allows you to send emails with ease.</p>
+<p>Easy Mailer is a simple python package that allows you to send emails with ease.</p>
 <h4>Usage</h4>
 <ul>
 <li>Import the class</li>
