@@ -75,7 +75,7 @@ class Mail:
         """This function shows the documentation of the class
         :return: The documentation of the class
         """
-        return """class Mail parameters:
+        print("""class Mail parameters:
         source_mail: The email address of the user that will send the email
         passwd: The password of the user that will send the email
         password should be an app password if you can't access your account 
@@ -85,4 +85,4 @@ class Mail:
         send_mail(to_email, subject, body): This function sends an email to the user
         show_status(): This function shows the mail status of the email
         login(): This function checks the connection to the server checks the user's credentials and logs the user in
-        help(): This function shows the documentation of the class"""
+        help(): This function shows the documentation of the class""")
