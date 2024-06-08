@@ -28,10 +28,8 @@ class Mail:
                 msg['From'] = self.source_mail
                 msg['To'] = self.source_mail
                 msg['Subject'] = subject
-                body = body
-                msg.attach(MIMEText(body, 'html'))
+                msg.attach(MIMEText(body, 'plain'))  # Change 'html' to 'plain'
                 text = msg.as_string()
-                self.server.starttls()
                 self.server.sendmail(self.source_mail, to_email, text)
                 self.server.quit()
                 self.mail_status = True
@@ -62,7 +60,6 @@ class Mail:
             self.server = smtplib.SMTP('smtp.gmail.com', 587)
             self.server.starttls()
             self.server.login(self.source_mail, self.passwd)
-            self.server.quit()
             self.conn_status = True
         except Exception as e:
             print(e)
